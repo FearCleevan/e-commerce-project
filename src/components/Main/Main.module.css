@@ -1,0 +1,11 @@
+/* components/Main/Main.module.css */
+.main {
+  flex: 1;
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 0 15px;
+  }
+}

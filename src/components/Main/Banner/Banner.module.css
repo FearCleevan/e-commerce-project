@@ -1,0 +1,144 @@
+/* components/Main/Banner/Banner.module.css */
+.banner {
+  background: linear-gradient(135deg, #A41F13 0%, #8a1a10 100%);
+  color: #FAF5F1;
+  padding: 60px 0;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bannerContent {
+  flex: 1;
+  padding-right: 40px;
+  max-width: 600px;
+}
+
+.bannerContent h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.bannerContent p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.bannerActions {
+  display: flex;
+  gap: 20px;
+}
+
+.primaryBtn, .secondaryBtn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primaryBtn {
+  background: #292F36;
+  color: #FAF5F1;
+}
+
+.primaryBtn:hover {
+  background: #1a1f25;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #FAF5F1;
+  border: 2px solid #FAF5F1;
+}
+
+.secondaryBtn:hover {
+  background: #FAF5F1;
+  color: #A41F13;
+  transform: translateY(-2px);
+}
+
+.bannerImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder {
+  width: 450px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);     
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .bannerContent {
+    padding-right: 0;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+  
+  .bannerActions {
+    justify-content: center;
+  }
+  
+  .placeholder {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 0;
+    margin: 20px 0;
+  }
+  
+  .bannerContent h1 {
+    font-size: 2.2rem;
+  }
+  
+  .bannerContent p {
+    font-size: 1.1rem;
+  }
+  
+  .bannerActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .placeholder {
+    height: 200px;
+  }
+}
