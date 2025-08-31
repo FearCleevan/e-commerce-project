@@ -1,6 +1,7 @@
 // components/Main/Banner/Banner.jsx
-import React from 'react';
+import React, { Suspense } from 'react';
 import styles from './Banner.module.css';
+import ThreeScene from './ThreeScene';
 
 const Banner = () => {
   return (
@@ -15,8 +16,10 @@ const Banner = () => {
           </div>
         </div>
         <div className={styles.bannerImage}>
-          <div className={styles.placeholder}>
-            <span>3D PC Preview</span>
+          <div className={styles.threeContainer}>
+            <Suspense fallback={<div className={styles.loading}>Loading 3D...</div>}>
+              <ThreeScene />
+            </Suspense>
           </div>
         </div>
       </div>
